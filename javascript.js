@@ -44,4 +44,12 @@ function game() {
             totalWins += 1;
         }
     }
+    if (totalWins > 0) {
+        if (playerWins > totalWins / 2) {
+            return console.log("You Win the Game!");
+        } else if (playerWins < totalWins / 2) {
+            return console.log("You Lose this Game, but don't worry! :)");
+        }
+        return console.log("This Game was a Draw!");
+    }
 }
