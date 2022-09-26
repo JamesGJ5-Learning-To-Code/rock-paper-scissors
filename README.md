@@ -7,6 +7,7 @@ Made at the behest of the Foundations Course in The Odin Project
 - For computer, make function called getComputerChoice that randomly returns either 'Rock', 'Paper' or 'Scissors'
 - Will call function in game when it's the computer's turn
 - Task: use console to make sure this function returns the expected output before moving to next step of code
+- Done
 
 2. Write a function called playRound that plays a single round of Rock Paper Scissors, that:
 
