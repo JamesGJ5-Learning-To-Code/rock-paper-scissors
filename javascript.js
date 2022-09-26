@@ -20,5 +20,11 @@ function playRound(playerSelection, computerSelection) {
                   playerSelection === "Scissors" && computerSelection === "Paper")
                   ? "Win" : "Lose";
     }
+    let action = ""
+    if (result !== "Draw") {
+        action = (result === "Win") ?
+        ` ${playerSelection} beats ${computerSelection}!` : ` ${playerSelection} is beaten by ${computerSelection}!`
+    }
+    console.log(`You ${result}!${action}`)
     return result;
 }
