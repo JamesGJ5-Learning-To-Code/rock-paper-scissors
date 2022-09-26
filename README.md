@@ -23,10 +23,14 @@ Made at the behest of the Foundations Course in The Odin Project
 
 - Call playRound inside game() to play a 5 round game that keeps score and reports a winner or loser at the end
     - Game can be a draw if it has to be 5 rounds
+        - DONE
     - A loop would be a concise way to do this
+        - DONE
     - Display the result of each round using console.log()
         - DONE
 - Display the winner at the end using console.log()
+    - DONE
 - Use prompt() to get input from the user
+    - DONE
 - Feel free to re-work your previous functions if you need to--might want to change return value to something more useful
 - Feel free to create more "helper" functions if they might be useful
