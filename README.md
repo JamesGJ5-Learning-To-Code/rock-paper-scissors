@@ -15,11 +15,13 @@ Made at the behest of the Foundations Course in The Odin Project
     - Make playerSelection parameter case-INsensitive (so users can input rock, ROCK, RocK etc. and it still works)
         - Done
 - Returns a string declaring the winner of the round like, for example, "You Lose this round! Paper beats Rock" or maybe "You Win this round! Paper beats Rock"
+    - Can also be a draw
 - NOTE: Want to return the results of this function call for later use, not console.log() them
 
 3. Write a new function called game():
 
 - Call playRound inside game() to play a 5 round game that keeps score and reports a winner or loser at the end
+    - Game can be a draw if it has to be 5 rounds
     - A loop would be a concise way to do this
     - Display the result of each round using console.log()
 - Display the winner at the end using console.log()

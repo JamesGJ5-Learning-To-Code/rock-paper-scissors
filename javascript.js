@@ -15,11 +15,25 @@ function getComputerChoice () {
 }
 
 function playRound(playerSelection, computerSelection) {
-    // console.log(playerSelection)
-    // console.log(computerSelection)
+    console.log(playerSelection)
+    console.log(computerSelection)
 
     playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase()
     // console.log(playerSelection)
+
+    // Rock beats Scissors
+    // Paper beats Rock
+    // Scissors beats Paper
+    if (playerSelection === computerSelection) {
+        result = "Draw"
+    } else {
+        result = (playerSelection === "Rock" && computerSelection === "Scissors" || 
+                  playerSelection === "Paper" && computerSelection === "Rock" || 
+                  playerSelection === "Scissors" && computerSelection === "Paper")
+                  ? "Win" : "Lose"
+    }
+    // console.log(result)
+    return result
 }
 
 playRound("rock", getComputerChoice())
