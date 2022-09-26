@@ -27,6 +27,6 @@ function playRound(playerSelection, computerSelection) {
         action = (result === "Win") ?
         ` ${playerSelection} beats ${computerSelection}!` : ` ${playerSelection} is beaten by ${computerSelection}!`;
     }
-    console.log(`You ${result}!${action}`);
+    console.log(`You ${result} this Round!${action}`);
     return result;
 }
