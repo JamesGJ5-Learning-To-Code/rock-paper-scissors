@@ -12,6 +12,7 @@ function getComputerChoice () {
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
     let result
+    // TODO: make the below into a helper function
     if (playerSelection === computerSelection) {
         result = "Draw";
     } else {
@@ -20,6 +21,7 @@ function playRound(playerSelection, computerSelection) {
                   playerSelection === "Scissors" && computerSelection === "Paper")
                   ? "Win" : "Lose";
     }
+    // TODO: make the below into a helper function
     let action = ""
     if (result !== "Draw") {
         action = (result === "Win") ?
