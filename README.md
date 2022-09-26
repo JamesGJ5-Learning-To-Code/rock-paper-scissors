@@ -7,13 +7,13 @@ Made at the behest of the Foundations Course in The Odin Project
 - For computer, make function called getComputerChoice that randomly returns either 'Rock', 'Paper' or 'Scissors'
 - Will call function in game when it's the computer's turn
 - Task: use console to make sure this function returns the expected output before moving to next step of code
-- Done
+- DONE
 
 2. Write a function called playRound that plays a single round of Rock Paper Scissors, that:
 
 - Takes parameters playerSelection and computerSelection
     - Make playerSelection parameter case-INsensitive (so users can input rock, ROCK, RocK etc. and it still works)
-        - Done
+        - DONE
 - Returns a string declaring the winner of the round like, for example, "You Lose this round! Paper beats Rock" or maybe "You Win this round! Paper beats Rock"
     - Can also be a draw
 - NOTE: Want to return the results of this function call for later use, not console.log() them
