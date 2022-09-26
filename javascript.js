@@ -13,3 +13,13 @@ function getComputerChoice () {
     // console.log(choice)
     return choice
 }
+
+function playRound(playerSelection, computerSelection) {
+    // console.log(playerSelection)
+    // console.log(computerSelection)
+
+    playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase()
+    // console.log(playerSelection)
+}
+
+playRound("rock", getComputerChoice())

@@ -13,6 +13,7 @@ Made at the behest of the Foundations Course in The Odin Project
 
 - Takes parameters playerSelection and computerSelection
     - Make playerSelection parameter case-INsensitive (so users can input rock, ROCK, RocK etc. and it still works)
+        - Done
 - Returns a string declaring the winner of the round like, for example, "You Lose this round! Paper beats Rock" or maybe "You Win this round! Paper beats Rock"
 - NOTE: Want to return the results of this function call for later use, not console.log() them
 
