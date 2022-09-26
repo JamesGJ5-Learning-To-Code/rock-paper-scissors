@@ -30,3 +30,18 @@ function playRound(playerSelection, computerSelection) {
     console.log(`You ${result} this Round!${action}`);
     return result;
 }
+
+function game() {
+    let playerWins = 0;
+    let totalWins = 0;
+    let roundResult
+    for (let i = 0; i < 5; i++) {
+        roundResult = playRound(prompt("Choose your weapon!"), getComputerChoice());
+        if (roundResult !== "Draw") {
+            if (roundResult === "Win") {
+                playerWins += 1
+            }
+            totalWins += 1
+        }
+    }
+}
