@@ -34,14 +34,14 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     let playerWins = 0;
     let totalWins = 0;
-    let roundResult
+    let roundResult;
     for (let i = 0; i < 5; i++) {
         roundResult = playRound(prompt("Choose your weapon!"), getComputerChoice());
         if (roundResult !== "Draw") {
             if (roundResult === "Win") {
-                playerWins += 1
+                playerWins += 1;
             }
-            totalWins += 1
+            totalWins += 1;
         }
     }
 }
