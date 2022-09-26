@@ -16,6 +16,7 @@ Made at the behest of the Foundations Course in The Odin Project
         - DONE
 - Returns a string declaring the winner of the round like, for example, "You Lose this round! Paper beats Rock" or maybe "You Win this round! Paper beats Rock"
     - Can also be a draw
+    - DONE, but only returns the result (Win, Loss or Draw), not the entire statement
 - NOTE: Want to return the results of this function call for later use, not console.log() them
 
 3. Write a new function called game():
@@ -24,6 +25,7 @@ Made at the behest of the Foundations Course in The Odin Project
     - Game can be a draw if it has to be 5 rounds
     - A loop would be a concise way to do this
     - Display the result of each round using console.log()
+        - DONE
 - Display the winner at the end using console.log()
 - Use prompt() to get input from the user
 - Feel free to re-work your previous functions if you need to--might want to change return value to something more useful
