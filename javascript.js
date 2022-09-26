@@ -9,10 +9,8 @@ function getComputerChoice () {
     }
 }
 
-function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
-    let result
-    // TODO: make the below into a helper function
+function getRoundResult(playerSelection, computerSelection) {
+    let result;
     if (playerSelection === computerSelection) {
         result = "Draw";
     } else {
@@ -21,6 +19,13 @@ function playRound(playerSelection, computerSelection) {
                   playerSelection === "Scissors" && computerSelection === "Paper")
                   ? "Win" : "Lose";
     }
+    return result;
+}
+
+function playRound(playerSelection, computerSelection) {
+    playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
+    let result
+    result = getRoundResult(playerSelection, computerSelection)
     // TODO: make the below into a helper function
     let action = "";
     if (result !== "Draw") {
