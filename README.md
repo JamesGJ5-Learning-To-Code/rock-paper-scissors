@@ -33,4 +33,6 @@ Made at the behest of the Foundations Course in The Odin Project
 - Use prompt() to get input from the user
     - DONE
 - Feel free to re-work your previous functions if you need to--might want to change return value to something more useful
+    - Done
 - Feel free to create more "helper" functions if they might be useful
+    - Done
