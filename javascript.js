@@ -22,11 +22,11 @@ function playRound(playerSelection, computerSelection) {
                   ? "Win" : "Lose";
     }
     // TODO: make the below into a helper function
-    let action = ""
+    let action = "";
     if (result !== "Draw") {
         action = (result === "Win") ?
-        ` ${playerSelection} beats ${computerSelection}!` : ` ${playerSelection} is beaten by ${computerSelection}!`
+        ` ${playerSelection} beats ${computerSelection}!` : ` ${playerSelection} is beaten by ${computerSelection}!`;
     }
-    console.log(`You ${result}!${action}`)
+    console.log(`You ${result}!${action}`);
     return result;
 }
