@@ -33,7 +33,7 @@ function showRoundResult(result, playerSelection, computerSelection) {
 
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
-    let result
+    let result;
     result = getRoundResult(playerSelection, computerSelection);
     showRoundResult(result, playerSelection, computerSelection);
     return result;
