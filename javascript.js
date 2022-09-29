@@ -41,8 +41,13 @@ function playRound(playerSelection, computerSelection) {
 
 const buttonList = document.querySelectorAll('button');
 
-playerWins = 0;
-computerWins = 0;
+let playerWins = 0;
+let computerWins = 0;
+
+function resetScore() {
+    playerWins = 0;
+    computerWins = 0;
+}
 
 const scoreDiv = document.querySelector('div#score');
 
@@ -57,11 +62,13 @@ buttonList.forEach((button) => {
                 computerWins += 1;
             };
         };
-        if (playerWins == 5 && computerWins < 5) {
-            scoreDescription = "You Won this Game! Refresh the Page to Win Again :)";
-        } else if (computerWins == 5 && playerWins < 5) {
-            scoreDescription = "You Lost this Game but Refresh the Page to Win Next Time :)";
-        } else if (playerWins < 5 && computerWins < 5) {
+        if (playerWins == 5) {
+            scoreDescription = "You Won this Game! :)";
+            resetScore();
+        } else if (computerWins == 5) {
+            scoreDescription = "You Lost this Game! But Don't Give Up! :)";
+            resetScore();
+        } else {
             scoreDescription = `Score: You ${playerWins} - ${computerWins} Computer`;
         };
         scoreDiv.textContent = scoreDescription;
