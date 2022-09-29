@@ -39,29 +39,6 @@ function playRound(playerSelection, computerSelection) {
     return result;
 }
 
-function game() {
-    let playerWins = 0;
-    let totalWins = 0;
-    let roundResult;
-    for (let i = 0; ; i++) {
-        roundResult = playRound(prompt("Choose your weapon!"), getComputerChoice());
-        if (roundResult !== "Draw") {
-            if (roundResult === "Win") {
-                playerWins += 1;
-            }
-            totalWins += 1;
-        }
-    }
-    if (totalWins > 0) {
-        if (playerWins > totalWins / 2) {
-            return console.log("You Win the Game!");
-        } else if (playerWins < totalWins / 2) {
-            return console.log("You Lose this Game, but don't worry! :)");
-        }
-        return console.log("This Game was a Draw!");
-    }
-}
-
 const buttonList = document.querySelectorAll('button');
 
 playerWins = 0;
