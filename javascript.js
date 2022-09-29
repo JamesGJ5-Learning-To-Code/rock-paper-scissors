@@ -29,7 +29,7 @@ function showRoundResult(result, playerSelection, computerSelection) {
         ` ${playerSelection} beats ${computerSelection}!` : ` ${playerSelection} is beaten by ${computerSelection}!`;
     }
     // console.log(`You ${result} this Round!${action}`);
-    div.textContent = `You ${result} this Round!${action}`;
+    commentaryDiv.textContent = `You ${result} this Round!${action}`;
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -65,13 +65,26 @@ function game() {
 
 const buttonList = document.querySelectorAll('button');
 
+playerWins = 0;
+computerWins = 0;
+
+const scoreDiv = document.querySelector('div#score');
+
 buttonList.forEach((button) => {
     button.addEventListener('click', () => {
         playerSelection = button.id;
-        playRound(playerSelection, getComputerChoice());
+        roundResult = playRound(playerSelection, getComputerChoice());
+        if (roundResult !== "Draw") {
+            if (roundResult === "Win") {
+                playerWins += 1;
+            } else {
+                computerWins += 1;
+            };
+        };
+        scoreDiv.textContent = `Score: You ${playerWins} - ${computerWins} Computer`
     });
 });
 
-const div = document.querySelector('div');
+const commentaryDiv = document.querySelector('div#result-description');
 
 // game();
