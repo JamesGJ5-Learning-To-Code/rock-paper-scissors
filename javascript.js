@@ -61,3 +61,5 @@ function game() {
         return console.log("This Game was a Draw!");
     }
 }
+
+game()
