@@ -28,7 +28,6 @@ function showRoundResult(result, playerSelection, computerSelection) {
         action = (result === "Win") ?
         ` ${playerSelection} beats ${computerSelection}!` : ` ${playerSelection} is beaten by ${computerSelection}!`;
     }
-    // console.log(`You ${result} this Round!${action}`);
     commentaryDiv.textContent = `You ${result} this Round!${action}`;
 }
 
@@ -81,10 +80,15 @@ buttonList.forEach((button) => {
                 computerWins += 1;
             };
         };
-        scoreDiv.textContent = `Score: You ${playerWins} - ${computerWins} Computer`
+        if (playerWins == 5 && computerWins < 5) {
+            scoreDescription = "You Won this Game! Refresh the Page to Win Again :)";
+        } else if (computerWins == 5 && playerWins < 5) {
+            scoreDescription = "You Lost this Game but Refresh the Page to Win Next Time :)";
+        } else if (playerWins < 5 && computerWins < 5) {
+            scoreDescription = `Score: You ${playerWins} - ${computerWins} Computer`;
+        };
+        scoreDiv.textContent = scoreDescription;
     });
 });
 
 const commentaryDiv = document.querySelector('div#result-description');
-
-// game();
