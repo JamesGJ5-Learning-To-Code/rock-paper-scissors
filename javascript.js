@@ -40,39 +40,45 @@ function playRound(playerSelection, computerSelection) {
 }
 
 const buttonList = document.querySelectorAll('button');
+const commentaryDiv = document.querySelector('div#result-description');
+const scoreDiv = document.querySelector('div#score');
 
 let playerWins = 0;
 let computerWins = 0;
+
+function updateWinCounts(roundResult) {
+    if (roundResult !== "Draw") {
+        if (roundResult === "Win") {
+            playerWins += 1;
+        } else {
+            computerWins += 1;
+        };
+    };
+};
 
 function resetScore() {
     playerWins = 0;
     computerWins = 0;
 }
 
-const scoreDiv = document.querySelector('div#score');
+function showScore() {
+    if (playerWins == 5) {
+        scoreDescription = "You Won this Game! :)";
+        resetScore();
+    } else if (computerWins == 5) {
+        scoreDescription = "You Lost this Game! But Don't Give Up! :)";
+        resetScore();
+    } else {
+        scoreDescription = `Score: You ${playerWins} - ${computerWins} Computer`;
+    };
+    scoreDiv.textContent = scoreDescription;
+};
 
 buttonList.forEach((button) => {
     button.addEventListener('click', () => {
         playerSelection = button.id;
         roundResult = playRound(playerSelection, getComputerChoice());
-        if (roundResult !== "Draw") {
-            if (roundResult === "Win") {
-                playerWins += 1;
-            } else {
-                computerWins += 1;
-            };
-        };
-        if (playerWins == 5) {
-            scoreDescription = "You Won this Game! :)";
-            resetScore();
-        } else if (computerWins == 5) {
-            scoreDescription = "You Lost this Game! But Don't Give Up! :)";
-            resetScore();
-        } else {
-            scoreDescription = `Score: You ${playerWins} - ${computerWins} Computer`;
-        };
-        scoreDiv.textContent = scoreDescription;
+        updateWinCounts(roundResult);
+        showScore();
     });
 });
-
-const commentaryDiv = document.querySelector('div#result-description');
