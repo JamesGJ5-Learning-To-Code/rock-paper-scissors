@@ -28,7 +28,8 @@ function showRoundResult(result, playerSelection, computerSelection) {
         action = (result === "Win") ?
         ` ${playerSelection} beats ${computerSelection}!` : ` ${playerSelection} is beaten by ${computerSelection}!`;
     }
-    console.log(`You ${result} this Round!${action}`);
+    // console.log(`You ${result} this Round!${action}`);
+    div.textContent = `You ${result} this Round!${action}`;
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -67,8 +68,10 @@ const buttonList = document.querySelectorAll('button');
 buttonList.forEach((button) => {
     button.addEventListener('click', () => {
         playerSelection = button.id;
-        playRound(playerSelection, getComputerChoice())
+        playRound(playerSelection, getComputerChoice());
     });
 });
+
+const div = document.querySelector('div');
 
 // game();
