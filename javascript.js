@@ -43,7 +43,7 @@ function game() {
     let playerWins = 0;
     let totalWins = 0;
     let roundResult;
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; ; i++) {
         roundResult = playRound(prompt("Choose your weapon!"), getComputerChoice());
         if (roundResult !== "Draw") {
             if (roundResult === "Win") {
