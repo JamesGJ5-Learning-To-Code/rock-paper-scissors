@@ -40,8 +40,8 @@ function getRoundResult(playerSelection, computerSelection) {
 
 function showRoundResult(result, playerSelection, computerSelection) {
     let action = "";
-    if (result !== "Draw") {
-        action = (result === "Win") ?
+    if (result !== "DRAW") {
+        action = (result === "WIN") ?
         ` ${playerSelection} beats ${computerSelection}!` : ` ${playerSelection} is beaten by ${computerSelection}!`;
     }
     commentaryDiv.textContent = `You ${result} this Round!${action}`;
