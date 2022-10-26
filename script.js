@@ -1,3 +1,19 @@
+const buttonList = document.querySelectorAll('button');
+const commentaryDiv = document.querySelector('div#result-description');
+const scoreDiv = document.querySelector('div#score');
+
+let playerWins = 0;
+let computerWins = 0;
+
+buttonList.forEach((button) => {
+    button.addEventListener('click', () => {
+        playerSelection = button.id;
+        roundResult = playRound(playerSelection, getComputerChoice());
+        updateWinCounts(roundResult);
+        showScore();
+    });
+});
+
 function getComputerChoice () {
     let choiceInteger = Math.floor(Math.random() * 3);
     if (choiceInteger === 0) {
@@ -39,13 +55,6 @@ function playRound(playerSelection, computerSelection) {
     return result;
 }
 
-const buttonList = document.querySelectorAll('button');
-const commentaryDiv = document.querySelector('div#result-description');
-const scoreDiv = document.querySelector('div#score');
-
-let playerWins = 0;
-let computerWins = 0;
-
 function updateWinCounts(roundResult) {
     if (roundResult !== "Draw") {
         if (roundResult === "Win") {
@@ -73,12 +82,3 @@ function showScore() {
     };
     scoreDiv.textContent = scoreDescription;
 };
-
-buttonList.forEach((button) => {
-    button.addEventListener('click', () => {
-        playerSelection = button.id;
-        roundResult = playRound(playerSelection, getComputerChoice());
-        updateWinCounts(roundResult);
-        showScore();
-    });
-});
