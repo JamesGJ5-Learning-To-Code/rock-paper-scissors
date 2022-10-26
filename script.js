@@ -56,8 +56,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function updateWinCounts(roundResult) {
-    if (roundResult !== "Draw") {
-        if (roundResult === "Win") {
+    if (roundResult !== "DRAW") {
+        if (roundResult === "WIN") {
             playerWins += 1;
         } else {
             computerWins += 1;
