@@ -12,12 +12,12 @@ function getComputerChoice () {
 function getRoundResult(playerSelection, computerSelection) {
     let result;
     if (playerSelection === computerSelection) {
-        result = "Draw";
+        result = "DRAW";
     } else {
         result = (playerSelection === "Rock" && computerSelection === "Scissors" || 
                   playerSelection === "Paper" && computerSelection === "Rock" || 
                   playerSelection === "Scissors" && computerSelection === "Paper")
-                  ? "Win" : "Lose";
+                  ? "WIN" : "LOSE";
     }
     return result;
 }
@@ -63,10 +63,10 @@ function resetScore() {
 
 function showScore() {
     if (playerWins == 5) {
-        scoreDescription = "You Won this Game! :)";
+        scoreDescription = "You won this Game! :)";
         resetScore();
     } else if (computerWins == 5) {
-        scoreDescription = "You Lost this Game! But Don't Give Up! :)";
+        scoreDescription = "You lost this Game! But Don't Give Up! :)";
         resetScore();
     } else {
         scoreDescription = `Score: You ${playerWins} - ${computerWins} Computer`;
