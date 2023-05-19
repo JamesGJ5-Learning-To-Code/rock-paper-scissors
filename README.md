@@ -1,0 +1,1 @@
+Basic, cliche rock-paper-scissors project made at the beginning of my JavaScript life.
